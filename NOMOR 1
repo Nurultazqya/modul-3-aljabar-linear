@@ -1,0 +1,12 @@
+import numpy as np
+A1 = np.array([[2, 3], [1, -1]])
+b1 = np.array([7, 1])
+hasil = np.linalg.solve(A1, b1)
+print(f"x = {hasil[0]}, y= {hasil[0]}",hasil)
+
+from sympy import symbols, Eq, solve
+x, y = symbols('x y')
+eq1 = Eq(2*x + 3*y, 7)
+eq2 = Eq(x - y, 1)
+solusi = solve((eq1, eq2), (x, y))
+print(f"Solusi: x = {solusi[x]}, y = {solusi[y]}")
